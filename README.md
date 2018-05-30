@@ -1,9 +1,9 @@
-#NiDM Development Setup
+# NiDM Development Setup
 
-##Install python3
+## Install python3
 	  sudo apt-get install python3
 
-##Install Anaconda
+## Install Anaconda
 	  cd ~/Downloads
 	  wget https://repo.anaconda.com/archive/Anaconda3-5.1.0-Linux-x86_64.sh
 	  sudo ./Anaconda3-5.1.0-Linux-x86_64.sh
@@ -11,7 +11,7 @@
 	  source ~/.bashrc
 
 
-##Setup conda environment
+## Setup conda environment
 
 	cd ~/
 	sudo apt-get -y install graphviz
@@ -23,13 +23,13 @@
 	pytest
 	pip install rdflib requests fuzzywuzzy owlready2 pygithub pybids duecredit
 
-##Download a datasets
+## Download a datasets
 Navigate to https://openneuro.org/datasets/ds001365/versions/00001
 Click the small download icon to download the dataset to ~/Download
       cd ~/workspace
       tar -xvf ~/Downloads/Indiv*.tar
 
-##Add NiDM data to CMU_b dataset
+## Add NiDM data to CMU_b dataset
       cd ~/workspace/Indiv_Diffs_ReadingSkill
       ~/PyNIDM/bin/BIDSMRI2NIDM.py -d ~/workspace/Indiv_Diffs_ReadingSkill
 
