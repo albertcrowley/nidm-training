@@ -29,7 +29,7 @@ This will create a pynidm_py3 conda environment and install the packages needed 
 	pip install rdflib requests fuzzywuzzy owlready2 pygithub pybids duecredit
 
 ## Download a datasets
-Starting with a BIDS formatted dataset you can create a nidm.ttl file. You can find free/open datasets at OpenNeuro. An exmaple is the [Indiv_Diffs_readingSkill](https://openneuro.org/datasets/ds001365/versions/00001) dataset. On the dataset details page you will need to click the small download icon to download the dataset. I didn't see the icon at first. It looks like ![download icon](https://raw.githubusercontent.com/albertcrowley/nidm-training/master/download-icon.png | width=100)  Store it in ~/Downloads.
+Starting with a BIDS formatted dataset you can create a nidm.ttl file. You can find free/open datasets at OpenNeuro. An exmaple is the [Indiv_Diffs_readingSkill](https://openneuro.org/datasets/ds001365/versions/00001) dataset. On the dataset details page you will need to click the small download icon to download the dataset. I didn't see the icon at first. It looks like ![download icon](https://raw.githubusercontent.com/albertcrowley/nidm-training/master/download-icon.png)  Store it in ~/Downloads.
 
 	cd ~/workspace
 	tar -xvf ~/Downloads/Indiv*.tar
