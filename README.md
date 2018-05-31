@@ -2,9 +2,13 @@
 There are two files that will be of interest to developers working with NIDM datasets. The first is the nidm.ttl. This file is a RDF document it "turtle" format describing the metadata for the associated dataset. The second file is the nidm.ttl.png file. This image file show a graphical representation of the RDF graph for the dataset. It may be useful to see at a glance what information is available for each entity.
 
 At the top of the nidm.ttl file you will see a list of namespace prefixes used to provide short names for elements used frequently in the rest of the file. When querying the NIDM file using SPARQL you will typically use the prefix + the identifier. For example, at the top of the file you may see the prefix:
-   @prefix ncicb: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+
+	@prefix ncicb: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+   
 Later in the document you will then see that prefix used when defining the age of an entity:
+
       ncicb:Age "0.876"^^xsd:string ;
+      
 When refering to the Age of that entity in a SPARQL query you would refere to it as "ncicb:Age"
 
 # Searching and Querying NIDM files
@@ -16,7 +20,7 @@ One concept that will make writing SPARQL queries a bit easier is understanding 
 # NIDM Development Setup
 
 # Vagrant VM
-The provided Vagrant file can be used to launch a VirtualBox VM compatible with the instructions below. You can also use a recent Ubuntu machine.  Some older Linux OS may not be able to install all the required packages.
+The Vagrant file provided in this repository can be used to launch a VirtualBox VM compatible with the instructions below. It may take some time when first started as a number of packages will be installed. If you aren't insterested in using a graphical interface and can be happy with a terminal window you can comment out the apt-get commands installing kubuntu-desktop.  You can also use any recent linux distribution if you have one available. If using a non-Ubuntu you may need to adapt the pacakage installation commands to work with your  system. Some older Linux OS may not be able to install all the required packages using the built in package manager.
 
 
 ## Install python3
