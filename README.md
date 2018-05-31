@@ -20,7 +20,13 @@ One concept that will make writing SPARQL queries a bit easier is understanding 
 # NIDM Development Setup
 
 # Vagrant VM
-The Vagrant file provided in this repository can be used to launch a VirtualBox VM compatible with the instructions below. It may take some time when first started as a number of packages will be installed. If you aren't insterested in using a graphical interface and can be happy with a terminal window you can comment out the apt-get commands installing kubuntu-desktop.  You can also use any recent linux distribution if you have one available. If using a non-Ubuntu you may need to adapt the pacakage installation commands to work with your  system. Some older Linux OS may not be able to install all the required packages using the built in package manager.
+The Vagrant file provided in this repository can be used to launch a VirtualBox VM compatible with the instructions below. It may take a long time when first started as a number of packages will be installed. Be prepared for 30-60 minutes. If you don't need a  graphical interface and can be happy with a terminal window, open the Vagrant file and comment out out the apt-get command for installing kubuntu-desktop. To startup the VM, install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and [Vagrant](https://www.vagrantup.com/downloads.html). Then navigate in a terminal window to the directory containing this repo and type:
+
+	vagrant up
+
+This will install and launch a new Ubuntu VM. When the provisioning is complete, **the VM will reboot so you may want to wait for that to complete before logging in.** 
+
+You can also use any recent linux distribution to run thgouth these instructions. It should work for OSX as well, but hasn't yet been tested there. If using a non-Ubuntu OS you may need to adapt the pacakage installation commands to work with your system. Some older Linux OS may not be able to install all the required packages using the built in package manager. 
 
 
 ## Install python3
