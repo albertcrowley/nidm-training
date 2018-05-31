@@ -15,7 +15,6 @@ qres = g.query(
     """SELECT DISTINCT ?id ?age ?assessment   
        WHERE {
           ?assessment prov:wasGeneratedBy ?acq .
-          ?acq dct:isPartOf ?session .
           ?acq prov:wasAssociatedWith ?person .
           ?assessment ncicb:Age ?age .
           ?person ndar:src_subject_id ?id
