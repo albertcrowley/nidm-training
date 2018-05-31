@@ -12,6 +12,7 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |v|
     v.memory = 3000
     v.cpus = 2
+    v.gui = true
   end
 	
   config.vm.provider "virtualbox" do |v|
@@ -31,6 +32,8 @@ Vagrant.configure("2") do |config|
 	apt-get -y install virtualbox-guest-dkms
 	apt-get -y install xterm
 	#apt-get -y install gnome-shell ubuntu-gnome-desktop
+
+        shutdown -r now
   SHELL
   
   
