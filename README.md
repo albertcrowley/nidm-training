@@ -79,7 +79,7 @@ You are now ready to query the dataset using a simple SPARQL query in the rdf-ag
    cd nidm-training
    python rdf-age-query.py -nidm ~/workspace/Indiv_Diffs_ReadingSkill/nidm.ttl
 
-The SPARQL query is:
+If you read the rdf-age-query.py script, you will see the SPARQL query:
 	
 	SELECT DISTINCT ?id ?age ?assessment   
 	WHERE {
