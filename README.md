@@ -66,12 +66,13 @@ You are now ready to query the dataset using a simple SPARQL query in the rdf-ag
    python rdf-age-query.py -nidm ~/workspace/Indiv_Diffs_ReadingSkill/nidm.ttl
 
 The SPARQL query is:
-    SELECT DISTINCT ?id ?age ?assessment   
-       WHERE {
-          ?assessment prov:wasGeneratedBy ?acq .
-          ?acq prov:wasAssociatedWith ?person .
-          ?assessment ncicb:Age ?age .
-          ?person ndar:src_subject_id ?id
-       }
-
-This query is a little bit complicated because you must link the age and subject ID through related assessments and acquisitions.  
+	
+	SELECT DISTINCT ?id ?age ?assessment   
+	WHERE {
+	  ?assessment prov:wasGeneratedBy ?acq .
+	  ?acq prov:wasAssociatedWith ?person .
+	  ?assessment ncicb:Age ?age .
+	  ?person ndar:src_subject_id ?id
+	}
+	
+Most of the complication in this query is because you must link the age and subject ID through related assessments and acquisitions. When viewing the results you will see that that the assessment ID is a NIDM identifier and not any ID found in the underlying BIDS dataset. The person/subject id _is_ an identifier used in the original dataset and is associated with the NIDM entity by "ndar:src_subject_id" which is a predicate meaning "has subject id".
